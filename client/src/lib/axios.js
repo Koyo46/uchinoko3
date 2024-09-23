@@ -1,6 +1,6 @@
 import Axios from 'axios'
 
-const laravelAxios = Axios.create({
+const axios = Axios.create({
     baseURL: process.env.NEXT_PUBLIC_BACKEND_URL,
     headers: {
         'X-Requested-With': 'XMLHttpRequest',
@@ -9,4 +9,4 @@ const laravelAxios = Axios.create({
     withXSRFToken: true
 })
 
-export default laravelAxios
+export default axios
