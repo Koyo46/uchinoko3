@@ -32,8 +32,13 @@ const Navigation = ({ user }) => {
                         <div className="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                             <NavLink
                                 href="/dashboard"
-                                active={usePathname() === '/dashboard'}>
-                                Dashboard
+                                active={usePathname() === '/timeline'}>
+                                タイムライン
+                            </NavLink>
+                            <NavLink
+                                href="/profile"
+                                active={usePathname() === '/profile'}>
+                                プロフィール
                             </NavLink>
                         </div>
                     </div>
@@ -63,7 +68,7 @@ const Navigation = ({ user }) => {
                             }>
                             {/* Authentication */}
                             <DropdownButton onClick={logout}>
-                                Logout
+                                ログアウト
                             </DropdownButton>
                         </Dropdown>
                     </div>
@@ -107,8 +112,13 @@ const Navigation = ({ user }) => {
                     <div className="pt-2 pb-3 space-y-1">
                         <ResponsiveNavLink
                             href="/dashboard"
-                            active={usePathname() === '/dashboard'}>
-                            Dashboard
+                            active={usePathname() === '/timeline'}>
+                            タイムライン
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink
+                            href="/profile"
+                            active={usePathname() === '/profile'}>
+                            プロフィール
                         </ResponsiveNavLink>
                     </div>
 
@@ -144,8 +154,13 @@ const Navigation = ({ user }) => {
                         <div className="mt-3 space-y-1">
                             {/* Authentication */}
                             <ResponsiveNavButton onClick={logout}>
-                                Logout
+                                ログアウト
                             </ResponsiveNavButton>
+                            <ResponsiveNavLink
+                            href="/profile"
+                            active={usePathname() === '/profile'}>
+                                プロフィール
+                            </ResponsiveNavLink>
                         </div>
                     </div>
                 </div>
